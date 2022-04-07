@@ -1,0 +1,24 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  margin: 3rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 0.8rem 2rem rgba(#5a6181, 0.05);
+}
+.numbers,
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.8rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.numbers {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.4rem;
+}
