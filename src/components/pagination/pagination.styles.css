@@ -44,10 +44,7 @@
   font-size: 100%;
   padding: 0.5em;
 }
-[data-pagination] a:focus,
-[data-pagination] a:hover {
-  color: #f60;
-}
+
 [data-pagination] li.current {
   background: rgba(0, 0, 0, 0.1);
 }
