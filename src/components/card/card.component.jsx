@@ -6,10 +6,10 @@ const Card = ({ superhero }) => {
 
   return (
     <div className="card-container" key={id}>
-      <img alt={`Superhero ${name}`} src={images.sm} />
+      <img className="card-image" alt={`Superhero ${name}`} src={images.sm} />
       <div>
-        <h3>{name}</h3>
-        <p>{biography.publisher}</p>
+        <h3 className="name">{name}</h3>
+        <p className="publisher">{biography.publisher}</p>
       </div>
     </div>
   );

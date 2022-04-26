@@ -1,8 +1,10 @@
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import CardPage from "../card-page/card-page.component";
 import Pagination from "../pagination/pagination.component";
+import "./card-list.styles.css";
 
 const CardList = ({ superheros }) => {
+  //console.log(superheros.length);
   const SUPERHEROS_PER_PAGE = 12;
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,6 +21,10 @@ const CardList = ({ superheros }) => {
   const handlePrevPage = () => {
     setCurrentPage(currentPage - 1);
   };
+
+  const handlePageNumber = (clickedPageNumber) => (e) => {
+    setCurrentPage(clickedPageNumber);
+  };
   useEffect(() => {
     setCurrentPage(1);
   }, [superheros]);
@@ -30,7 +36,7 @@ const CardList = ({ superheros }) => {
   }, [currentPage]);
 
   return (
-    <Fragment>
+    <div className="card-view">
       <CardPage superheros={filteredSuperhero} />
 
       <Pagination
@@ -38,8 +44,9 @@ const CardList = ({ superheros }) => {
         lastPageNumber={lastPageNumber}
         onNextPage={handleNextPage}
         onPrevPage={handlePrevPage}
+        handlePageNumber={handlePageNumber}
       />
-    </Fragment>
+    </div>
   );
 };
 
